@@ -1,0 +1,29 @@
+﻿@model LiftingLibrary.Models.LoginUser
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!-- Link to site.css & new login.css -->
+<link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="~/css/login.css" />
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form method="post" asp-controller="Login" asp-action="Authenticate">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit" class="btn btn-login">Login</button>
+        <p class="register-link">
+            Don't have an account?
+            <a asp-controller="Home" asp-action="Register">Register</a>
+        </p>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+﻿@model LiftingLibrary.Models.OneRepMax
+
+<!-- Link CSS files -->
+<link rel="stylesheet" href="~/css/workout.css" asp-append-version="true" />
+
+<div class="oneRepMax-detail-container">
+    <div class="grid-container">
+        <!-- Column Headers -->
+        <div class="grid-header">Reps</div>
+        <div class="grid-header">Weight</div>
+
+        <!-- Dynamic Data -->
+        @for (int i = 0; i < Model.Reps.Count; i++)
+        {
+            <div class="grid-item"><strong>@Model.Reps[i]</strong></div>
+            <div class="grid-item">@Model.Weights[i]</div>
+        }
+    </div>
+</div>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 5px;
+        max-width: 300px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .grid-header {
+        font-weight: bold;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .grid-item {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+</style>

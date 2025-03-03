@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewData["Title"] = "ExerciseSuggestions";
+}
+
+<div class="suggestionContainer">
+    <h1 class="pageName">Exercise Suggestions</h1>
+
+    <div class="exercise">
+        <h2 class="workoutName">Squats</h2>
+        <p class="workoutDescription">Squats are great for building lower body strength.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/YaXPRqUwItQ" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2 class="workoutName">Deadlifts</h2>
+        <p class="workoutDescription">Deadlifts help strengthen your posterior chain and improve posture.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/op9kVnSso6Q" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2 class="workoutName">Bench Press</h2>
+        <p class="workoutDescription">The bench press is a fundamental upper body strength exercise.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2 class="workoutName">Pull-Ups</h2>
+        <p class="workoutDescription">Pull-ups target your back and arms for a well-rounded upper body workout.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/eGo4IYlbE5g" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<style>
+    .suggestionContainer {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .pageName {
+        color: #222;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .exercise {
+        background: #fff;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .workoutName {
+        color: #0073e6;
+        margin-bottom: 10px;
+    }
+
+    .workoutDescription {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #555;
+    }
+
+    .video-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+</style>

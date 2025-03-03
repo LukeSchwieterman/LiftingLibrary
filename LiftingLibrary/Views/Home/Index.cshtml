@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Lifting Library</h1>
+        <p class="lead">Lift Smart. Train Hard. Track Progress.</p>
+
+        @if (GlobalUser.LoggedIn)
+        {
+            <p class="welcome-text">Welcome back, <strong>@GlobalUser.User.Name</strong>!</p>
+            <a class="btn btn-primary btn-lg mt-3" asp-controller="Library" asp-action="Workouts">Go to Workouts</a>
+        }
+        else
+        {
+            <div class="mt-4">
+                <a class="btn btn-primary btn-lg me-2" asp-controller="Home" asp-action="Register">Sign Up</a>
+                <a class="btn btn-outline-dark btn-lg" asp-controller="Home" asp-action="Login">Login</a>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="container my-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="feature-card">
+                <h3>📊 Exercise Suggestions</h3>
+                <p>View a list of exercises and how to perform them properly.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card">
+                <h3>💪 Workout Plans</h3>
+                <p>Access pre-made workout plans or create your own.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card">
+                <h3>🔢 One-Rep Max</h3>
+                <p>Calculate and optimize your strength potential.</p>
+            </div>
+        </div>
+    </div>
+</div>

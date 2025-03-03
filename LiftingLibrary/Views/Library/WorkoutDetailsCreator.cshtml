@@ -1,0 +1,51 @@
+﻿@model CreatedWorkoutDetail
+
+
+<!-- Link CSS files -->
+<link rel="stylesheet" href="~/css/workout.css" asp-append-version="true" />
+
+<div class="workout-form-container">
+    <h4 class="text-center mb-4">Add Exercise Info</h4>
+    <form id="createWorkoutDetailForm" method="post" asp-controller="WorkoutDetails" asp-action="CreateWorkoutDetail">
+        <div class="form-group">
+            <label for="workoutName" class="form-label">Name:</label>
+            <input type="text" name="Name" id="workoutName" class="form-control" placeholder="Enter workout name" value="@(Model != null ? Model.Name : "")" required>
+        </div>
+
+        <div class="form-group">
+            <label for="workoutCategory" class="form-label">Category:</label>
+            <input type="text" name="Category" id="workoutCategory" class="form-control" placeholder="e.g., Strength, Cardio" required>
+        </div>
+
+        <div class="form-group">
+            <label for="workoutSets" class="form-label">Sets:</label>
+            <input type="number" name="SetNumber" id="workoutSets" class="form-control" min="1" placeholder="Number of sets">
+        </div>
+
+        <div class="form-group">
+            <label for="workoutReps" class="form-label">Reps:</label>
+            <input type="number" name="RepNumber" id="workoutReps" class="form-control" min="1" placeholder="Reps per set">
+        </div>
+
+        <div class="form-group">
+            <label for="workoutWeight" class="form-label">Weight (lbs):</label>
+            <input type="number" name="Weight" id="workoutWeight" class="form-control" min="0" placeholder="Enter weight used">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a id="returnToWorkoutsBtn" href="Workouts" class="btn btn-success" style="display: none;">Return to Workouts</a>
+    </form>
+
+    <!-- Success message (hidden by default) -->
+    <div id="successMessage" class="alert alert-success mt-3 text-center" style="display: none;"/>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <script>
+        document.getElementById("successMessage").style.display = "block"; // Show success message
+        document.getElementById("successMessage").innerHTML = '@(TempData["SuccessMessage"])'; // Set the success message
+        document.getElementById("returnToWorkoutsBtn").style.display = ""; // Show WorkoutsBtn
+        document.getElementById("createWorkoutDetailForm").reset(); // Reset form fields
+    </script>
+}

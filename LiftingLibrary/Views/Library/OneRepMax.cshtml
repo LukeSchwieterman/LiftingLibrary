@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "OneRepMax";
+}
+
+<!-- Link CSS files -->
+<link rel="stylesheet" href="~/css/workout.css" asp-append-version="true" />
+
+<h1>OneRepMax</h1>
+
+<div class="workout-form-container">
+    <form id="calculateOneRepMaxForm" name="OneRepMaxForm">
+        <div class="form-group">
+            <label for="oneRepMaxWeight" class="form-label">Weight (lbs):</label>
+            <input type="number" name="Weight" id="oneRepMaxWeight" class="form-control" min="0" placeholder="Enter weight used">
+        </div>
+    
+        <div class="form-group">
+            <label for="oneRepMaxReps" class="form-label">Reps:</label>
+            <input type="number" name="RepNumber" id="oneRepMaxReps" class="form-control" min="1" placeholder="Reps per set">
+        </div>
+
+        <button class="btn-details" onclick="showOneRepMaxDetails()" type="button">Calculate</button>
+    </form>
+</div>
+
+<!-- Modal for oneRepMax Details -->
+<div class="modal fade" id="oneRepMaxDetailsModal" tabindex="-1" aria-labelledby="oneRepMaxDetailsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="oneRepMaxDetailsLabel">One Rep Max Grid</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="oneRepMaxDetailsContent">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS & jQuery -->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript for Modal -->
+<script>
+    function showOneRepMaxDetails() {
+        var weight = document.forms['OneRepMaxForm'].elements['Weight'].value;
+        var reps = document.forms['OneRepMaxForm'].elements['RepNumber'].value;
+        $.ajax({
+            url: '/OneRepMax/CalculateOneRepMax',
+            type: 'GET',
+            data: {
+                weightNumber: weight,
+                repNumber: reps
+            },
+            success: function (data) {
+                $('#oneRepMaxDetailsContent').html(data);
+                $('#oneRepMaxDetailsModal').modal('show');
+            },
+            error: function () {
+                $('#oneRepMaxDetailsContent').html('<p class="text-danger">Failed to load one rep max details.</p>');
+            }
+        });
+    }
+</script>

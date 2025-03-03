@@ -1,0 +1,95 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LiftingLibrary
+build_property.RootNamespace = LiftingLibrary
+build_property.ProjectDir = C:\Users\Luke\Documents\Baker College\SeniorProject\LiftingLibrary\LiftingLibrary\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Luke\Documents\Baker College\SeniorProject\LiftingLibrary\LiftingLibrary
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Library/ExerciseSuggestions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxFeGVyY2lzZVN1Z2dlc3Rpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Library/OneRepMax.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxPbmVSZXBNYXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Library/OneRepMaxDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxPbmVSZXBNYXhEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Library/Progression.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxQcm9ncmVzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Library/WorkoutCreator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxXb3Jrb3V0Q3JlYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Library/WorkoutDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxXb3Jrb3V0RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Library/WorkoutDetailsCreator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxXb3Jrb3V0RGV0YWlsc0NyZWF0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Library/Workouts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxXb3Jrb3V0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Luke/Documents/Baker College/SeniorProject/LiftingLibrary/LiftingLibrary/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-17kj3ex0h6

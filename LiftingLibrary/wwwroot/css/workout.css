@@ -1,0 +1,176 @@
+﻿/* General Styling */
+body {
+    background-color: #f4f4f4;
+}
+
+/* Page Title */
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Workout Form Container */
+.workout-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Buttons */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+    margin-left: 10px;
+}
+
+.btn-success:hover {
+    background: #1e7e34;
+}
+
+/* Workout Display */
+.workoutsDisplay {
+    padding: 0;
+    margin: 50px auto;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.workoutsDisplay li {
+    display: inline-block;
+    width: 20%;
+    min-width: 220px;
+    max-width: 250px;
+    padding: 20px;
+    position: relative;
+    margin: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.workoutsDisplay li:hover {
+    transform: translateY(-5px);
+}
+
+.workoutsDisplay li h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.workoutsDisplay li h3 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.workoutsDisplay li p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.btn-details {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-details:hover {
+    background: #0056b3;
+}
+
+/* No Workouts Found */
+.no-workouts {
+    color: #ff0000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal-body {
+    font-size: 16px;
+    color: #444;
+}
+
+.text-danger {
+    color: red;
+}

@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Workouts";
+}
+<h1 class="page-title text-center">@ViewData["Title"]</h1>
+
+<!-- Link CSS files -->
+<link rel="stylesheet" href="~/css/workout.css" asp-append-version="true" />
+
+<!-- Workout Selection Form -->
+<div class="container">
+    <div class="workout-form-container">
+        <h2 class="form-title">Find Your Workouts</h2>
+        <form id="selectWorkoutsForm" method="post" asp-controller="Workouts" asp-action="DisplayWorkoutsByDate">
+            <label for="searchDate" class="form-label">Select Workout Date:</label>
+            <input type="date" name="searchDate" id="searchDate" class="form-control" required />
+
+            <div class="form-buttons">
+                <button type="submit" id="searchWorkoutsButton" class="btn btn-primary">Search</button>
+                <a href="WorkoutCreator" class="btn btn-success">Create Workout</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Display Workouts -->
+<ul class="workoutsDisplay">
+    @if (GlobalUser.Workouts != null && ViewBag.SearchDate != null)
+    {
+        var filteredWorkouts = GlobalUser.Workouts.Where(w => ViewBag.SearchDate == w.Date).ToList();
+        if (filteredWorkouts.Any())
+        {
+            @foreach (Workout workout in filteredWorkouts)
+            {
+                <li>
+                    <h3>@workout.Date.ToShortDateString()</h3>
+                    <p>@workout.Notes</p>
+                    <button class="btn-details" onclick="showWorkoutDetails(@workout.WorkoutId)">View Details</button>
+                </li>
+            }
+        }
+        else
+        {
+            <li class="no-workouts">No workouts found for this date.</li>
+        }
+    }
+</ul>
+
+<!-- Modal for Workout Details -->
+<div class="modal fade" id="workoutDetailsModal" tabindex="-1" aria-labelledby="workoutDetailsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="workoutDetailsLabel">Workout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="workoutDetailsContent">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS & jQuery -->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript for Modal -->
+<script>
+    function showWorkoutDetails(workoutId) {
+        $.ajax({
+            url: '/Workouts/GetWorkoutDetails',
+            type: 'GET',
+            data: { id: workoutId },
+            success: function (data) {
+                $('#workoutDetailsContent').html(data);
+                $('#workoutDetailsModal').modal('show');
+            },
+            error: function () {
+                $('#workoutDetailsContent').html('<p class="text-danger">Failed to load workout details.</p>');
+            }
+        });
+    }
+</script>

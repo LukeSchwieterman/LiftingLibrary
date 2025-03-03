@@ -1,0 +1,87 @@
+﻿/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    padding: 80px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #f8d210;
+    border-color: #f8d210;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #f5c400;
+    border-color: #f5c400;
+}
+
+.btn-outline-light {
+    border-color: #0d6efd;
+    color: #0d6efd;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-outline-dark {
+    background-color: white;
+    border-color: black;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-dark:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Features Section */
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+}

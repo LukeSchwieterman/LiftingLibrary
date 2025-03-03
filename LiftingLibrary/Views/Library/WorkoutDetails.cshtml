@@ -1,0 +1,31 @@
+﻿@model List<WorkoutDetail>
+
+<!-- Link CSS files -->
+<link rel="stylesheet" href="~/css/workout.css" asp-append-version="true" />
+
+<div class="workout-detail-container">
+
+    @if (Model != null && Model.Count > 0)
+    {
+        <ul class="list-group">
+            @foreach (var detail in Model)
+            {
+                <li class="list-group-item">
+                    <strong>@detail.Name</strong>
+                    - @detail.Sets sets
+                    - @detail.Reps reps
+                    - @detail.Weight lbs
+                </li>
+            }
+        </ul>
+        TempData["WorkoutID"] = Model[0].WorkoutId;
+    }
+    else
+    {
+        <p>No workout details found.</p>
+    }
+    <div class="form-group">
+        <a asp-controller="Library" asp-action="WorkoutDetailsCreator" class="btn btn-details">Add New Exercise</a>
+    </div>
+    
+</div>
